@@ -30,6 +30,8 @@
         {
             this.grpPino = new System.Windows.Forms.GroupBox();
             this.grpCambios = new System.Windows.Forms.GroupBox();
+            this.cmbSecado = new System.Windows.Forms.ComboBox();
+            this.lblSecado = new System.Windows.Forms.Label();
             this.lblCantidadPaquetes = new System.Windows.Forms.Label();
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -65,24 +67,44 @@
             // 
             // grpCambios
             // 
+            this.grpCambios.Controls.Add(this.cmbSecado);
+            this.grpCambios.Controls.Add(this.lblSecado);
             this.grpCambios.Controls.Add(this.lblCantidadPaquetes);
             this.grpCambios.Controls.Add(this.btnRestar);
             this.grpCambios.Controls.Add(this.btnAgregar);
             this.grpCambios.Controls.Add(this.txtCantidad);
             this.grpCambios.Controls.Add(this.cmbPino);
             this.grpCambios.Controls.Add(this.lblMedidaPino);
-            this.grpCambios.Location = new System.Drawing.Point(7, 651);
+            this.grpCambios.Location = new System.Drawing.Point(7, 617);
             this.grpCambios.Name = "grpCambios";
-            this.grpCambios.Size = new System.Drawing.Size(302, 155);
+            this.grpCambios.Size = new System.Drawing.Size(302, 189);
             this.grpCambios.TabIndex = 21;
             this.grpCambios.TabStop = false;
             this.grpCambios.Text = "Agregado de Pino";
+            // 
+            // cmbSecado
+            // 
+            this.cmbSecado.FormattingEnabled = true;
+            this.cmbSecado.Location = new System.Drawing.Point(146, 33);
+            this.cmbSecado.Name = "cmbSecado";
+            this.cmbSecado.Size = new System.Drawing.Size(147, 21);
+            this.cmbSecado.TabIndex = 25;
+            // 
+            // lblSecado
+            // 
+            this.lblSecado.AutoSize = true;
+            this.lblSecado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblSecado.Location = new System.Drawing.Point(9, 33);
+            this.lblSecado.Name = "lblSecado";
+            this.lblSecado.Size = new System.Drawing.Size(52, 15);
+            this.lblSecado.TabIndex = 26;
+            this.lblSecado.Text = "Secado:";
             // 
             // lblCantidadPaquetes
             // 
             this.lblCantidadPaquetes.AutoSize = true;
             this.lblCantidadPaquetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidadPaquetes.Location = new System.Drawing.Point(9, 73);
+            this.lblCantidadPaquetes.Location = new System.Drawing.Point(9, 107);
             this.lblCantidadPaquetes.Name = "lblCantidadPaquetes";
             this.lblCantidadPaquetes.Size = new System.Drawing.Size(131, 15);
             this.lblCantidadPaquetes.TabIndex = 24;
@@ -90,7 +112,7 @@
             // 
             // btnRestar
             // 
-            this.btnRestar.Location = new System.Drawing.Point(201, 108);
+            this.btnRestar.Location = new System.Drawing.Point(201, 147);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
             this.btnRestar.TabIndex = 5;
@@ -100,7 +122,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(103, 108);
+            this.btnAgregar.Location = new System.Drawing.Point(103, 147);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
             this.btnAgregar.TabIndex = 4;
@@ -110,7 +132,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(146, 73);
+            this.txtCantidad.Location = new System.Drawing.Point(146, 106);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
             this.txtCantidad.TabIndex = 3;
@@ -118,7 +140,7 @@
             // cmbPino
             // 
             this.cmbPino.FormattingEnabled = true;
-            this.cmbPino.Location = new System.Drawing.Point(146, 34);
+            this.cmbPino.Location = new System.Drawing.Point(146, 67);
             this.cmbPino.Name = "cmbPino";
             this.cmbPino.Size = new System.Drawing.Size(147, 21);
             this.cmbPino.TabIndex = 2;
@@ -127,7 +149,7 @@
             // 
             this.lblMedidaPino.AutoSize = true;
             this.lblMedidaPino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblMedidaPino.Location = new System.Drawing.Point(9, 35);
+            this.lblMedidaPino.Location = new System.Drawing.Point(9, 68);
             this.lblMedidaPino.Name = "lblMedidaPino";
             this.lblMedidaPino.Size = new System.Drawing.Size(99, 15);
             this.lblMedidaPino.TabIndex = 19;
@@ -135,7 +157,7 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(754, 707);
+            this.btnExportar.Location = new System.Drawing.Point(754, 674);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(150, 50);
             this.btnExportar.TabIndex = 1;
@@ -145,7 +167,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(754, 650);
+            this.btnListar.Location = new System.Drawing.Point(754, 617);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(150, 50);
             this.btnListar.TabIndex = 0;
@@ -165,7 +187,7 @@
             this.Column6});
             this.GrillaMaderas.Location = new System.Drawing.Point(7, 20);
             this.GrillaMaderas.Name = "GrillaMaderas";
-            this.GrillaMaderas.Size = new System.Drawing.Size(897, 625);
+            this.GrillaMaderas.Size = new System.Drawing.Size(897, 591);
             this.GrillaMaderas.TabIndex = 100;
             // 
             // Column4
@@ -241,5 +263,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.ComboBox cmbSecado;
+        private System.Windows.Forms.Label lblSecado;
     }
 }

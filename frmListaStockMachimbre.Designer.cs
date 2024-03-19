@@ -45,6 +45,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbCalidad = new System.Windows.Forms.ComboBox();
+            this.lblCalidad = new System.Windows.Forms.Label();
             this.grpMaderas.SuspendLayout();
             this.grpCambios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaMachimbre)).BeginInit();
@@ -65,15 +67,17 @@
             // 
             // grpCambios
             // 
+            this.grpCambios.Controls.Add(this.cmbCalidad);
+            this.grpCambios.Controls.Add(this.lblCalidad);
             this.grpCambios.Controls.Add(this.lblCantidad);
             this.grpCambios.Controls.Add(this.btnRestar);
             this.grpCambios.Controls.Add(this.btnAgregar);
             this.grpCambios.Controls.Add(this.txtCantidad);
             this.grpCambios.Controls.Add(this.cmbMachimbre);
             this.grpCambios.Controls.Add(this.lblMedidaMachimbre);
-            this.grpCambios.Location = new System.Drawing.Point(7, 651);
+            this.grpCambios.Location = new System.Drawing.Point(7, 633);
             this.grpCambios.Name = "grpCambios";
-            this.grpCambios.Size = new System.Drawing.Size(302, 155);
+            this.grpCambios.Size = new System.Drawing.Size(316, 173);
             this.grpCambios.TabIndex = 21;
             this.grpCambios.TabStop = false;
             this.grpCambios.Text = "Agregado de Machimbres";
@@ -82,7 +86,7 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidad.Location = new System.Drawing.Point(9, 73);
+            this.lblCantidad.Location = new System.Drawing.Point(6, 95);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(131, 15);
             this.lblCantidad.TabIndex = 24;
@@ -90,7 +94,7 @@
             // 
             // btnRestar
             // 
-            this.btnRestar.Location = new System.Drawing.Point(201, 108);
+            this.btnRestar.Location = new System.Drawing.Point(217, 130);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
             this.btnRestar.TabIndex = 100;
@@ -100,7 +104,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(103, 108);
+            this.btnAgregar.Location = new System.Drawing.Point(119, 130);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
             this.btnAgregar.TabIndex = 4;
@@ -110,7 +114,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(146, 73);
+            this.txtCantidad.Location = new System.Drawing.Point(162, 95);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
             this.txtCantidad.TabIndex = 3;
@@ -118,7 +122,7 @@
             // cmbMachimbre
             // 
             this.cmbMachimbre.FormattingEnabled = true;
-            this.cmbMachimbre.Location = new System.Drawing.Point(146, 34);
+            this.cmbMachimbre.Location = new System.Drawing.Point(162, 66);
             this.cmbMachimbre.Name = "cmbMachimbre";
             this.cmbMachimbre.Size = new System.Drawing.Size(147, 21);
             this.cmbMachimbre.TabIndex = 2;
@@ -127,7 +131,7 @@
             // 
             this.lblMedidaMachimbre.AutoSize = true;
             this.lblMedidaMachimbre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblMedidaMachimbre.Location = new System.Drawing.Point(9, 35);
+            this.lblMedidaMachimbre.Location = new System.Drawing.Point(6, 66);
             this.lblMedidaMachimbre.Name = "lblMedidaMachimbre";
             this.lblMedidaMachimbre.Size = new System.Drawing.Size(138, 15);
             this.lblMedidaMachimbre.TabIndex = 19;
@@ -135,7 +139,7 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(754, 710);
+            this.btnExportar.Location = new System.Drawing.Point(754, 691);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(150, 50);
             this.btnExportar.TabIndex = 1;
@@ -144,7 +148,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(754, 651);
+            this.btnListar.Location = new System.Drawing.Point(754, 633);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(150, 50);
             this.btnListar.TabIndex = 0;
@@ -164,7 +168,7 @@
             this.Column6});
             this.GrillaMachimbre.Location = new System.Drawing.Point(7, 20);
             this.GrillaMachimbre.Name = "GrillaMachimbre";
-            this.GrillaMachimbre.Size = new System.Drawing.Size(897, 625);
+            this.GrillaMachimbre.Size = new System.Drawing.Size(897, 607);
             this.GrillaMachimbre.TabIndex = 0;
             // 
             // Column4
@@ -203,6 +207,24 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 130;
             // 
+            // cmbCalidad
+            // 
+            this.cmbCalidad.FormattingEnabled = true;
+            this.cmbCalidad.Location = new System.Drawing.Point(162, 34);
+            this.cmbCalidad.Name = "cmbCalidad";
+            this.cmbCalidad.Size = new System.Drawing.Size(147, 21);
+            this.cmbCalidad.TabIndex = 101;
+            // 
+            // lblCalidad
+            // 
+            this.lblCalidad.AutoSize = true;
+            this.lblCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblCalidad.Location = new System.Drawing.Point(6, 35);
+            this.lblCalidad.Name = "lblCalidad";
+            this.lblCalidad.Size = new System.Drawing.Size(52, 15);
+            this.lblCalidad.TabIndex = 102;
+            this.lblCalidad.Text = "Calidad:";
+            // 
             // frmListaStockMachimbre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,5 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.ComboBox cmbCalidad;
+        private System.Windows.Forms.Label lblCalidad;
     }
 }

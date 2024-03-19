@@ -45,6 +45,8 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbEspecie = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grpMaderas.SuspendLayout();
             this.grpCambios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaMaderas)).BeginInit();
@@ -65,13 +67,15 @@
             // 
             // grpCambios
             // 
+            this.grpCambios.Controls.Add(this.cmbEspecie);
+            this.grpCambios.Controls.Add(this.label1);
             this.grpCambios.Controls.Add(this.lblCantidad);
             this.grpCambios.Controls.Add(this.btnRestar);
             this.grpCambios.Controls.Add(this.btnAgregar);
             this.grpCambios.Controls.Add(this.txtCantidad);
             this.grpCambios.Controls.Add(this.cmbMadera);
             this.grpCambios.Controls.Add(this.lblMedidaMadera);
-            this.grpCambios.Location = new System.Drawing.Point(7, 651);
+            this.grpCambios.Location = new System.Drawing.Point(16, 651);
             this.grpCambios.Name = "grpCambios";
             this.grpCambios.Size = new System.Drawing.Size(302, 155);
             this.grpCambios.TabIndex = 21;
@@ -82,7 +86,7 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidad.Location = new System.Drawing.Point(9, 73);
+            this.lblCantidad.Location = new System.Drawing.Point(6, 82);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(131, 15);
             this.lblCantidad.TabIndex = 24;
@@ -90,7 +94,7 @@
             // 
             // btnRestar
             // 
-            this.btnRestar.Location = new System.Drawing.Point(201, 108);
+            this.btnRestar.Location = new System.Drawing.Point(198, 108);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
             this.btnRestar.TabIndex = 5;
@@ -100,7 +104,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(103, 108);
+            this.btnAgregar.Location = new System.Drawing.Point(100, 108);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
             this.btnAgregar.TabIndex = 4;
@@ -110,7 +114,7 @@
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(146, 73);
+            this.txtCantidad.Location = new System.Drawing.Point(143, 82);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
             this.txtCantidad.TabIndex = 3;
@@ -118,7 +122,7 @@
             // cmbMadera
             // 
             this.cmbMadera.FormattingEnabled = true;
-            this.cmbMadera.Location = new System.Drawing.Point(146, 34);
+            this.cmbMadera.Location = new System.Drawing.Point(143, 53);
             this.cmbMadera.Name = "cmbMadera";
             this.cmbMadera.Size = new System.Drawing.Size(147, 21);
             this.cmbMadera.TabIndex = 2;
@@ -127,7 +131,7 @@
             // 
             this.lblMedidaMadera.AutoSize = true;
             this.lblMedidaMadera.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblMedidaMadera.Location = new System.Drawing.Point(9, 35);
+            this.lblMedidaMadera.Location = new System.Drawing.Point(6, 56);
             this.lblMedidaMadera.Name = "lblMedidaMadera";
             this.lblMedidaMadera.Size = new System.Drawing.Size(128, 15);
             this.lblMedidaMadera.TabIndex = 19;
@@ -203,6 +207,24 @@
             this.Column6.Name = "Column6";
             this.Column6.Width = 130;
             // 
+            // cmbEspecie
+            // 
+            this.cmbEspecie.FormattingEnabled = true;
+            this.cmbEspecie.Location = new System.Drawing.Point(143, 26);
+            this.cmbEspecie.Name = "cmbEspecie";
+            this.cmbEspecie.Size = new System.Drawing.Size(147, 21);
+            this.cmbEspecie.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Especie:";
+            // 
             // frmListadoStockMaderasDuras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,5 +262,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.ComboBox cmbEspecie;
+        private System.Windows.Forms.Label label1;
     }
 }
