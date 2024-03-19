@@ -28,6 +28,48 @@ namespace ControlStock
         public enum Secado { SecadoHorno, SecadoNatural };
         public Secado MetodoSecado;
 
+        public DataTable ObtenerSecadoPino()
+        {
+            DataTable secado = new DataTable();
+            try
+            {
+                string sql = "SELECT DISTINCT Secado FROM Pino";
+                using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
+                using (OleDbCommand cmd = new OleDbCommand(sql, connection))
+                {
+                    connection.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(secado);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al obtener los secados de las maderas: " + e.Message);
+            }
+            return secado;
+        }
+        public DataTable ObtenerMedidasPorSecado(string secado)
+        {
+            DataTable medidas = new DataTable();
+            try
+            {
+                string sql = "SELECT DISTINCT Medida FROM Pino WHERE Secado = @Secado";
+                using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
+                using (OleDbCommand cmd = new OleDbCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Secado", secado);
+
+                    connection.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(medidas);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al obtener las medidas filtradas por secado: " + e.Message);
+            }
+            return medidas;
+        }
         public DataTable ObtenerMedidasPino()
         {
             DataTable medidas = new DataTable();
@@ -116,11 +158,11 @@ namespace ControlStock
                 MessageBox.Show(e.ToString());
             }
         }
-        public void SumarCantidadPaquetes(string medida, int cantidad)
+        public void SumarCantidadPaquetes(string medida, string secado, int cantidad)
         {
             try
             {
-                string sql = $"UPDATE Pino SET [Cantidad Paquetes] = [Cantidad Paquetes] + {cantidad} WHERE Medida = '{medida}'";
+                string sql = $"UPDATE Pino SET [Cantidad Paquetes] = [Cantidad Paquetes] + {cantidad} WHERE Medida = '{medida}' AND Secado = '{secado}'";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))
@@ -134,11 +176,11 @@ namespace ControlStock
                 MessageBox.Show("Error al sumar cantidad de paquetes: " + e.Message);
             }
         }
-        public void RestarCantidadPaquetes(string medida, int cantidad)
+        public void RestarCantidadPaquetes(string medida, string secado, int cantidad)
         {
             try
             {
-                string sql = $"UPDATE Pino SET [Cantidad Paquetes] = [Cantidad Paquetes] - {cantidad} WHERE Medida = '{medida}'";
+                string sql = $"UPDATE Pino SET [Cantidad Paquetes] = [Cantidad Paquetes] - {cantidad} WHERE Medida = '{medida}' AND Secado = '{secado}'";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))

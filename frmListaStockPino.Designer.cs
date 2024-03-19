@@ -89,6 +89,7 @@
             this.cmbSecado.Name = "cmbSecado";
             this.cmbSecado.Size = new System.Drawing.Size(147, 21);
             this.cmbSecado.TabIndex = 25;
+            this.cmbSecado.SelectedIndexChanged += new System.EventHandler(this.cmbSecado_SelectedIndexChanged);
             // 
             // lblSecado
             // 

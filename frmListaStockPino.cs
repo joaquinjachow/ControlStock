@@ -29,12 +29,14 @@ namespace ControlStock
         {
             try
             {
+                cmbSecado.DataSource = pino.ObtenerSecadoPino();
+                cmbSecado.DisplayMember = "Secado";
                 cmbPino.DataSource = pino.ObtenerMedidasPino();
                 cmbPino.DisplayMember = "Medida";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar las medidas de maderas: " + ex.Message);
+                MessageBox.Show("Error al cargar las medidas y secado de maderas: " + ex.Message);
             }
         }
 
@@ -43,8 +45,9 @@ namespace ControlStock
             try
             {
                 string medida = cmbPino.Text;
+                string secado = cmbSecado.Text;
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
-                pino.SumarCantidadPaquetes(medida, cantidad);
+                pino.SumarCantidadPaquetes(medida, secado, cantidad);
                 MessageBox.Show("Cantidad de paquetes agregada correctamente.");
                 txtCantidad.Text = "";
                 pino.ListarPino(GrillaMaderas);
@@ -60,8 +63,9 @@ namespace ControlStock
             try
             {
                 string medida = cmbPino.Text;
+                string secado = cmbSecado.Text;
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
-                pino.RestarCantidadPaquetes(medida, cantidad);
+                pino.RestarCantidadPaquetes(medida, secado, cantidad);
                 MessageBox.Show("Cantidad de paquetes restada correctamente.");
                 txtCantidad.Text = "";
                 pino.ListarPino(GrillaMaderas);
@@ -76,6 +80,21 @@ namespace ControlStock
         {
             pino.GenerarReportePino();
             MessageBox.Show("Reporte generado con exito");
+        }
+
+        private void cmbSecado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string secadoSeleccionado = cmbSecado.Text;
+            DataTable medidasFiltradas = pino.ObtenerMedidasPorSecado(secadoSeleccionado);
+            cmbPino.DataSource = medidasFiltradas;
+            cmbPino.DisplayMember = "Medida";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar las medidas por secado: " + ex.Message);
+            }
         }
     }
 }
