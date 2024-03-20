@@ -30,6 +30,8 @@
         {
             this.grpMaderas = new System.Windows.Forms.GroupBox();
             this.grpCambios = new System.Windows.Forms.GroupBox();
+            this.cmbEspecie = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbEspecie = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.grpMaderas.SuspendLayout();
             this.grpCambios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaMaderas)).BeginInit();
@@ -81,6 +81,25 @@
             this.grpCambios.TabIndex = 21;
             this.grpCambios.TabStop = false;
             this.grpCambios.Text = "Agregado de Maderas";
+            // 
+            // cmbEspecie
+            // 
+            this.cmbEspecie.FormattingEnabled = true;
+            this.cmbEspecie.Location = new System.Drawing.Point(143, 26);
+            this.cmbEspecie.Name = "cmbEspecie";
+            this.cmbEspecie.Size = new System.Drawing.Size(147, 21);
+            this.cmbEspecie.TabIndex = 25;
+            this.cmbEspecie.SelectedIndexChanged += new System.EventHandler(this.cmbEspecie_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label1.Location = new System.Drawing.Point(6, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 15);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Especie:";
             // 
             // lblCantidad
             // 
@@ -206,24 +225,6 @@
             this.Column6.HeaderText = "Volúmen";
             this.Column6.Name = "Column6";
             this.Column6.Width = 130;
-            // 
-            // cmbEspecie
-            // 
-            this.cmbEspecie.FormattingEnabled = true;
-            this.cmbEspecie.Location = new System.Drawing.Point(143, 26);
-            this.cmbEspecie.Name = "cmbEspecie";
-            this.cmbEspecie.Size = new System.Drawing.Size(147, 21);
-            this.cmbEspecie.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label1.Location = new System.Drawing.Point(6, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 15);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Especie:";
             // 
             // frmListadoStockMaderasDuras
             // 
