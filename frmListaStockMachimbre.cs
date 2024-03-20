@@ -29,12 +29,14 @@ namespace ControlStock
         {
             try
             {
+                cmbCalidad.DataSource = machimbre.ObtenerCalidadMachimbre();
+                cmbCalidad.DisplayMember = "Calidad";
                 cmbMachimbre.DataSource = machimbre.ObtenerMedidasMachimbre();
                 cmbMachimbre.DisplayMember = "Medida";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar las medidas de maderas: " + ex.Message);
+                MessageBox.Show("Error al cargar las medidas y calidades de los machimbres: " + ex.Message);
             }
         }
 
@@ -43,8 +45,9 @@ namespace ControlStock
             try
             {
                 string medida = cmbMachimbre.Text;
+                string calidad = cmbCalidad.Text;
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
-                machimbre.SumarCantidadPaquetes(medida, cantidad);
+                machimbre.SumarCantidadPaquetes(medida, calidad, cantidad);
                 MessageBox.Show("Cantidad de paquetes agregada correctamente.");
                 txtCantidad.Text = "";
                 machimbre.ListarMachimbre(GrillaMachimbre);
@@ -60,8 +63,9 @@ namespace ControlStock
             try
             {
                 string medida = cmbMachimbre.Text;
+                string calidad = cmbCalidad.Text;
                 int cantidad = Convert.ToInt32(txtCantidad.Text);
-                machimbre.RestarCantidadPaquetes(medida, cantidad);
+                machimbre.RestarCantidadPaquetes(medida, calidad, cantidad);
                 MessageBox.Show("Cantidad de paquetes restada correctamente.");
                 txtCantidad.Text = "";
                 machimbre.ListarMachimbre(GrillaMachimbre);
@@ -69,6 +73,21 @@ namespace ControlStock
             catch (Exception ex)
             {
                 MessageBox.Show("Error al restar cantidad de paquetes: " + ex.Message);
+            }
+        }
+
+        private void cmbCalidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string calidadSeleccionada = cmbCalidad.Text;
+                DataTable medidasFiltradas = machimbre.ObtenerMedidasPorCalidad(calidadSeleccionada);
+                cmbMachimbre.DataSource = medidasFiltradas;
+                cmbMachimbre.DisplayMember = "Medida";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al filtrar las medidas por calidades: " + ex.Message);
             }
         }
     }

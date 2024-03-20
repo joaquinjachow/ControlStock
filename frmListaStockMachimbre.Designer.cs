@@ -30,6 +30,8 @@
         {
             this.grpMaderas = new System.Windows.Forms.GroupBox();
             this.grpCambios = new System.Windows.Forms.GroupBox();
+            this.cmbCalidad = new System.Windows.Forms.ComboBox();
+            this.lblCalidad = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -45,8 +47,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbCalidad = new System.Windows.Forms.ComboBox();
-            this.lblCalidad = new System.Windows.Forms.Label();
             this.grpMaderas.SuspendLayout();
             this.grpCambios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaMachimbre)).BeginInit();
@@ -81,6 +81,25 @@
             this.grpCambios.TabIndex = 21;
             this.grpCambios.TabStop = false;
             this.grpCambios.Text = "Agregado de Machimbres";
+            // 
+            // cmbCalidad
+            // 
+            this.cmbCalidad.FormattingEnabled = true;
+            this.cmbCalidad.Location = new System.Drawing.Point(162, 34);
+            this.cmbCalidad.Name = "cmbCalidad";
+            this.cmbCalidad.Size = new System.Drawing.Size(147, 21);
+            this.cmbCalidad.TabIndex = 101;
+            this.cmbCalidad.SelectedIndexChanged += new System.EventHandler(this.cmbCalidad_SelectedIndexChanged);
+            // 
+            // lblCalidad
+            // 
+            this.lblCalidad.AutoSize = true;
+            this.lblCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblCalidad.Location = new System.Drawing.Point(6, 35);
+            this.lblCalidad.Name = "lblCalidad";
+            this.lblCalidad.Size = new System.Drawing.Size(52, 15);
+            this.lblCalidad.TabIndex = 102;
+            this.lblCalidad.Text = "Calidad:";
             // 
             // lblCantidad
             // 
@@ -206,24 +225,6 @@
             this.Column6.HeaderText = "Volúmen";
             this.Column6.Name = "Column6";
             this.Column6.Width = 130;
-            // 
-            // cmbCalidad
-            // 
-            this.cmbCalidad.FormattingEnabled = true;
-            this.cmbCalidad.Location = new System.Drawing.Point(162, 34);
-            this.cmbCalidad.Name = "cmbCalidad";
-            this.cmbCalidad.Size = new System.Drawing.Size(147, 21);
-            this.cmbCalidad.TabIndex = 101;
-            // 
-            // lblCalidad
-            // 
-            this.lblCalidad.AutoSize = true;
-            this.lblCalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCalidad.Location = new System.Drawing.Point(6, 35);
-            this.lblCalidad.Name = "lblCalidad";
-            this.lblCalidad.Size = new System.Drawing.Size(52, 15);
-            this.lblCalidad.TabIndex = 102;
-            this.lblCalidad.Text = "Calidad:";
             // 
             // frmListaStockMachimbre
             // 

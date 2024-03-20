@@ -24,6 +24,48 @@ namespace ControlStock
         public Int32 CantidadTablasPaquete;
         public String Calidad;
 
+        public DataTable ObtenerCalidadMachimbre()
+        {
+            DataTable calidad = new DataTable();
+            try
+            {
+                string sql = "SELECT DISTINCT Calidad FROM Machimbre";
+                using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
+                using (OleDbCommand cmd = new OleDbCommand(sql, connection))
+                {
+                    connection.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(calidad);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al obtener las calidades de los machimbres: " + e.Message);
+            }
+            return calidad;
+        }
+        public DataTable ObtenerMedidasPorCalidad(string calidades)
+        {
+            DataTable calidad = new DataTable();
+            try
+            {
+                string sql = "SELECT DISTINCT Medida FROM Machimbre WHERE Calidad = @Calidad";
+                using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
+                using (OleDbCommand cmd = new OleDbCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Calidad", calidades);
+
+                    connection.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(calidad);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al obtener las medidas filtradas por calidad: " + e.Message);
+            }
+            return calidad;
+        }
         public DataTable ObtenerMedidasMachimbre()
         {
             DataTable medidas = new DataTable();
@@ -104,11 +146,11 @@ namespace ControlStock
                 MessageBox.Show(e.ToString());
             }
         }
-        public void SumarCantidadPaquetes(string medida, int cantidad)
+        public void SumarCantidadPaquetes(string medida, string calidad, int cantidad)
         {
             try
             {
-                string sql = $"UPDATE Machimbre SET [Cantidad Paquetes] = [Cantidad Paquetes] + {cantidad} WHERE Medida = '{medida}'";
+                string sql = $"UPDATE Machimbre SET [Cantidad Paquetes] = [Cantidad Paquetes] + {cantidad} WHERE Medida = '{medida}' AND Calidad = '{calidad}'";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))
@@ -122,11 +164,11 @@ namespace ControlStock
                 MessageBox.Show("Error al sumar cantidad de paquetes: " + e.Message);
             }
         }
-        public void RestarCantidadPaquetes(string medida, int cantidad)
+        public void RestarCantidadPaquetes(string medida, string calidad, int cantidad)
         {
             try
             {
-                string sql = $"UPDATE Machimbre SET [Cantidad Paquetes] = [Cantidad Paquetes] - {cantidad} WHERE Medida = '{medida}'";
+                string sql = $"UPDATE Machimbre SET [Cantidad Paquetes] = [Cantidad Paquetes] - {cantidad} WHERE Medida = '{medida}' AND Calidad = '{calidad}'";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))
@@ -140,6 +182,5 @@ namespace ControlStock
                 MessageBox.Show("Error al restar cantidad de paquetes: " + e.Message);
             }
         }
-
     }
 }
