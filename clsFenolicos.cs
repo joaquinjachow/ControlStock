@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms;
+using static ControlStock.clsPino;
 
 namespace ControlStock
 {
@@ -43,6 +44,48 @@ namespace ControlStock
                 MessageBox.Show("Error al obtener las calidades de los fenólicos: " + e.Message);
             }
             return Calidad;
+        }
+        public DataTable ObtenerEspesorPorCalidad(string calidad)
+        {
+            DataTable espesor = new DataTable();
+            try
+            {
+                string sql = "SELECT DISTINCT Espesor FROM Fenólicos WHERE Calidad = @Calidad";
+                using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
+                using (OleDbCommand cmd = new OleDbCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Calidad", calidad);
+
+                    connection.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(espesor);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al obtener el espesor filtrado por calidad: " + e.Message);
+            }
+            return espesor;
+        }
+        public DataTable ObtenerEspesor()
+        {
+            DataTable espesor = new DataTable();
+            try
+            {
+                string sql = "SELECT DISTINCT Espesor FROM Fenólicos";
+                using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
+                using (OleDbCommand cmd = new OleDbCommand(sql, connection))
+                {
+                    connection.Open();
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+                    adapter.Fill(espesor);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error al obtener el espesor de los fenólicos: " + e.Message);
+            }
+            return espesor;
         }
         public void AgregarNuevoFenolicos()
         {
@@ -102,11 +145,11 @@ namespace ControlStock
                 MessageBox.Show(e.ToString());
             }
         }
-        public void SumarCantidadHojas(string calidad, int cantidad)
+        public void SumarCantidadHojas(int cantidad, string calidad, string espesor)
         {
             try
             {
-                string sql = $"UPDATE Fenólicos SET [Cantidad de Hojas Totales] = [Cantidad de Hojas Totales] + {cantidad} WHERE Calidad = '{calidad}'";
+                string sql = $"UPDATE Fenólicos SET [Cantidad de Hojas Totales] = [Cantidad de Hojas Totales] + {cantidad} WHERE Calidad = '{calidad}' AND Espesor = '{espesor}'";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))
@@ -120,11 +163,11 @@ namespace ControlStock
                 MessageBox.Show("Error al sumar cantidad de hojas: " + e.Message);
             }
         }
-        public void RestarCantidadHojas(string calidad, int cantidad)
+        public void RestarCantidadHojas(int cantidad, string calidad, string espesor)
         {
             try
             {
-                string sql = $"UPDATE Fenólicos SET [Cantidad de Hojas Totales] = [Cantidad de Hojas Totales] - {cantidad} WHERE Calidad = '{calidad}'";
+                string sql = $"UPDATE Fenólicos SET [Cantidad de Hojas Totales] = [Cantidad de Hojas Totales] - {cantidad} WHERE Calidad = '{calidad}' AND Espesor = '{espesor}'";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))

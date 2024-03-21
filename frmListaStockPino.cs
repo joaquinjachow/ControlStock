@@ -87,9 +87,9 @@ namespace ControlStock
             try
             {
                 string secadoSeleccionado = cmbSecado.Text;
-            DataTable medidasFiltradas = pino.ObtenerMedidasPorSecado(secadoSeleccionado);
-            cmbPino.DataSource = medidasFiltradas;
-            cmbPino.DisplayMember = "Medida";
+                DataTable medidasFiltradas = pino.ObtenerMedidasPorSecado(secadoSeleccionado);
+                cmbPino.DataSource = medidasFiltradas;
+                cmbPino.DisplayMember = "Medida";
             }
             catch (Exception ex)
             {
