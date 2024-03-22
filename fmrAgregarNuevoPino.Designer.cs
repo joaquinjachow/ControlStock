@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grpCargadeDatos = new System.Windows.Forms.GroupBox();
+            this.cmbSecado = new System.Windows.Forms.ComboBox();
             this.lblSecado = new System.Windows.Forms.Label();
             this.txtCantidadTablas = new System.Windows.Forms.TextBox();
             this.lblCantidadTablas = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.lblMedida = new System.Windows.Forms.Label();
             this.txtCantidadPaquetes = new System.Windows.Forms.TextBox();
             this.lblCantidadPaquetes = new System.Windows.Forms.Label();
-            this.cmbSecado = new System.Windows.Forms.ComboBox();
             this.grpCargadeDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,14 @@
             this.grpCargadeDatos.TabIndex = 2;
             this.grpCargadeDatos.TabStop = false;
             this.grpCargadeDatos.Text = "Carga de datos";
+            // 
+            // cmbSecado
+            // 
+            this.cmbSecado.FormattingEnabled = true;
+            this.cmbSecado.Location = new System.Drawing.Point(257, 28);
+            this.cmbSecado.Name = "cmbSecado";
+            this.cmbSecado.Size = new System.Drawing.Size(142, 26);
+            this.cmbSecado.TabIndex = 0;
             // 
             // lblSecado
             // 
@@ -150,14 +158,6 @@
             this.lblCantidadPaquetes.Size = new System.Drawing.Size(136, 18);
             this.lblCantidadPaquetes.TabIndex = 2;
             this.lblCantidadPaquetes.Text = "Cantidad Paquetes:";
-            // 
-            // cmbSecado
-            // 
-            this.cmbSecado.FormattingEnabled = true;
-            this.cmbSecado.Location = new System.Drawing.Point(257, 28);
-            this.cmbSecado.Name = "cmbSecado";
-            this.cmbSecado.Size = new System.Drawing.Size(142, 26);
-            this.cmbSecado.TabIndex = 22;
             // 
             // fmrAgregarNuevoPino
             // 

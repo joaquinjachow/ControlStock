@@ -30,6 +30,8 @@
         {
             this.grpMaderas = new System.Windows.Forms.GroupBox();
             this.grpCambios = new System.Windows.Forms.GroupBox();
+            this.cmbCalidad = new System.Windows.Forms.ComboBox();
+            this.lblCalidadFenolico = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnRestar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cmbCalidad = new System.Windows.Forms.ComboBox();
-            this.lblCalidadFenolico = new System.Windows.Forms.Label();
             this.grpMaderas.SuspendLayout();
             this.grpCambios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrillaFenolicos)).BeginInit();
@@ -80,6 +80,25 @@
             this.grpCambios.TabStop = false;
             this.grpCambios.Text = "Agregado de Fenólicos";
             // 
+            // cmbCalidad
+            // 
+            this.cmbCalidad.FormattingEnabled = true;
+            this.cmbCalidad.Location = new System.Drawing.Point(143, 27);
+            this.cmbCalidad.Name = "cmbCalidad";
+            this.cmbCalidad.Size = new System.Drawing.Size(147, 21);
+            this.cmbCalidad.TabIndex = 2;
+            this.cmbCalidad.SelectedIndexChanged += new System.EventHandler(this.cmbCalidad_SelectedIndexChanged);
+            // 
+            // lblCalidadFenolico
+            // 
+            this.lblCalidadFenolico.AutoSize = true;
+            this.lblCalidadFenolico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblCalidadFenolico.Location = new System.Drawing.Point(6, 27);
+            this.lblCalidadFenolico.Name = "lblCalidadFenolico";
+            this.lblCalidadFenolico.Size = new System.Drawing.Size(122, 15);
+            this.lblCalidadFenolico.TabIndex = 26;
+            this.lblCalidadFenolico.Text = "Calidad del Fenólico:";
+            // 
             // lblCantidad
             // 
             this.lblCantidad.AutoSize = true;
@@ -95,7 +114,7 @@
             this.btnRestar.Location = new System.Drawing.Point(198, 116);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
-            this.btnRestar.TabIndex = 5;
+            this.btnRestar.TabIndex = 6;
             this.btnRestar.Text = "Restar";
             this.btnRestar.UseVisualStyleBackColor = true;
             this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
@@ -105,7 +124,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(100, 116);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -115,7 +134,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(143, 82);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
-            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TabIndex = 4;
             // 
             // cmbEspesor
             // 
@@ -123,7 +142,7 @@
             this.cmbEspesor.Location = new System.Drawing.Point(143, 54);
             this.cmbEspesor.Name = "cmbEspesor";
             this.cmbEspesor.Size = new System.Drawing.Size(147, 21);
-            this.cmbEspesor.TabIndex = 2;
+            this.cmbEspesor.TabIndex = 3;
             // 
             // lblEspesor
             // 
@@ -143,6 +162,7 @@
             this.btnExportar.TabIndex = 1;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnListar
             // 
@@ -165,7 +185,7 @@
             this.GrillaFenolicos.Location = new System.Drawing.Point(7, 20);
             this.GrillaFenolicos.Name = "GrillaFenolicos";
             this.GrillaFenolicos.Size = new System.Drawing.Size(696, 616);
-            this.GrillaFenolicos.TabIndex = 100;
+            this.GrillaFenolicos.TabIndex = 7;
             // 
             // Column3
             // 
@@ -190,25 +210,6 @@
             this.Column6.HeaderText = "Cantidad de Hojas Totales";
             this.Column6.Name = "Column6";
             this.Column6.Width = 150;
-            // 
-            // cmbCalidad
-            // 
-            this.cmbCalidad.FormattingEnabled = true;
-            this.cmbCalidad.Location = new System.Drawing.Point(143, 27);
-            this.cmbCalidad.Name = "cmbCalidad";
-            this.cmbCalidad.Size = new System.Drawing.Size(147, 21);
-            this.cmbCalidad.TabIndex = 25;
-            this.cmbCalidad.SelectedIndexChanged += new System.EventHandler(this.cmbCalidad_SelectedIndexChanged);
-            // 
-            // lblCalidadFenolico
-            // 
-            this.lblCalidadFenolico.AutoSize = true;
-            this.lblCalidadFenolico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCalidadFenolico.Location = new System.Drawing.Point(6, 27);
-            this.lblCalidadFenolico.Name = "lblCalidadFenolico";
-            this.lblCalidadFenolico.Size = new System.Drawing.Size(122, 15);
-            this.lblCalidadFenolico.TabIndex = 26;
-            this.lblCalidadFenolico.Text = "Calidad del Fenólico:";
             // 
             // frmListaStockFenólicos
             // 

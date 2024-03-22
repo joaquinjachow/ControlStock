@@ -88,7 +88,7 @@
             this.cmbEspecie.Location = new System.Drawing.Point(143, 26);
             this.cmbEspecie.Name = "cmbEspecie";
             this.cmbEspecie.Size = new System.Drawing.Size(147, 21);
-            this.cmbEspecie.TabIndex = 25;
+            this.cmbEspecie.TabIndex = 2;
             this.cmbEspecie.SelectedIndexChanged += new System.EventHandler(this.cmbEspecie_SelectedIndexChanged);
             // 
             // label1
@@ -116,7 +116,7 @@
             this.btnRestar.Location = new System.Drawing.Point(198, 108);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
-            this.btnRestar.TabIndex = 5;
+            this.btnRestar.TabIndex = 6;
             this.btnRestar.Text = "Restar";
             this.btnRestar.UseVisualStyleBackColor = true;
             this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
@@ -126,7 +126,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(100, 108);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -136,7 +136,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(143, 82);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
-            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TabIndex = 4;
             // 
             // cmbMadera
             // 
@@ -144,7 +144,7 @@
             this.cmbMadera.Location = new System.Drawing.Point(143, 53);
             this.cmbMadera.Name = "cmbMadera";
             this.cmbMadera.Size = new System.Drawing.Size(147, 21);
-            this.cmbMadera.TabIndex = 2;
+            this.cmbMadera.TabIndex = 3;
             // 
             // lblMedidaMadera
             // 
@@ -164,6 +164,7 @@
             this.btnExportar.TabIndex = 1;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnListar
             // 
@@ -188,7 +189,7 @@
             this.GrillaMaderas.Location = new System.Drawing.Point(7, 20);
             this.GrillaMaderas.Name = "GrillaMaderas";
             this.GrillaMaderas.Size = new System.Drawing.Size(866, 625);
-            this.GrillaMaderas.TabIndex = 100;
+            this.GrillaMaderas.TabIndex = 7;
             // 
             // Column4
             // 

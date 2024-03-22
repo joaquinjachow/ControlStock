@@ -90,5 +90,11 @@ namespace ControlStock
                 MessageBox.Show("Error al filtrar las medidas por calidades: " + ex.Message);
             }
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            machimbre.GenerarReporteMachimbre();
+            MessageBox.Show("Reporte generado con exito");
+        }
     }
 }

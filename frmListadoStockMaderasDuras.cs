@@ -91,5 +91,11 @@ namespace ControlStock
                 MessageBox.Show("Error al filtrar las medidas por especies: " + ex.Message);
             }
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            madera.GenerarReporteMaderaDura();
+            MessageBox.Show("Reporte generado con exito");
+        }
     }
 }

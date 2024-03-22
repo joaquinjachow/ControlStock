@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpCargadeDatos = new System.Windows.Forms.GroupBox();
+            this.txtEspecie = new System.Windows.Forms.TextBox();
+            this.lblEspecie = new System.Windows.Forms.Label();
             this.txtCantidadTablas = new System.Windows.Forms.TextBox();
             this.lblCantidadTablas = new System.Windows.Forms.Label();
             this.txtNumeroPaquete = new System.Windows.Forms.TextBox();
@@ -38,8 +40,6 @@
             this.lblMedida = new System.Windows.Forms.Label();
             this.txtCantidadPaquetes = new System.Windows.Forms.TextBox();
             this.lblCantidadPaquetes = new System.Windows.Forms.Label();
-            this.txtEspecie = new System.Windows.Forms.TextBox();
-            this.lblEspecie = new System.Windows.Forms.Label();
             this.grpCargadeDatos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,23 @@
             this.grpCargadeDatos.TabIndex = 3;
             this.grpCargadeDatos.TabStop = false;
             this.grpCargadeDatos.Text = "Carga de datos";
+            // 
+            // txtEspecie
+            // 
+            this.txtEspecie.Location = new System.Drawing.Point(250, 33);
+            this.txtEspecie.Name = "txtEspecie";
+            this.txtEspecie.Size = new System.Drawing.Size(142, 24);
+            this.txtEspecie.TabIndex = 0;
+            this.txtEspecie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblEspecie
+            // 
+            this.lblEspecie.AutoSize = true;
+            this.lblEspecie.Location = new System.Drawing.Point(14, 33);
+            this.lblEspecie.Name = "lblEspecie";
+            this.lblEspecie.Size = new System.Drawing.Size(65, 18);
+            this.lblEspecie.TabIndex = 21;
+            this.lblEspecie.Text = "Especie:";
             // 
             // txtCantidadTablas
             // 
@@ -111,7 +128,7 @@
             this.btnAgregarNuevo.Location = new System.Drawing.Point(250, 209);
             this.btnAgregarNuevo.Name = "btnAgregarNuevo";
             this.btnAgregarNuevo.Size = new System.Drawing.Size(142, 29);
-            this.btnAgregarNuevo.TabIndex = 4;
+            this.btnAgregarNuevo.TabIndex = 5;
             this.btnAgregarNuevo.Text = "Agregar Nuevo";
             this.btnAgregarNuevo.UseVisualStyleBackColor = true;
             this.btnAgregarNuevo.Click += new System.EventHandler(this.btnAgregarNuevo_Click);
@@ -141,23 +158,6 @@
             this.lblCantidadPaquetes.Size = new System.Drawing.Size(136, 18);
             this.lblCantidadPaquetes.TabIndex = 2;
             this.lblCantidadPaquetes.Text = "Cantidad Paquetes:";
-            // 
-            // txtEspecie
-            // 
-            this.txtEspecie.Location = new System.Drawing.Point(250, 33);
-            this.txtEspecie.Name = "txtEspecie";
-            this.txtEspecie.Size = new System.Drawing.Size(142, 24);
-            this.txtEspecie.TabIndex = 0;
-            this.txtEspecie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // lblEspecie
-            // 
-            this.lblEspecie.AutoSize = true;
-            this.lblEspecie.Location = new System.Drawing.Point(14, 33);
-            this.lblEspecie.Name = "lblEspecie";
-            this.lblEspecie.Size = new System.Drawing.Size(65, 18);
-            this.lblEspecie.TabIndex = 21;
-            this.lblEspecie.Text = "Especie:";
             // 
             // frmAgregarNuevaMaderaDura
             // 

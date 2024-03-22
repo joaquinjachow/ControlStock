@@ -88,7 +88,7 @@
             this.cmbCalidad.Location = new System.Drawing.Point(162, 34);
             this.cmbCalidad.Name = "cmbCalidad";
             this.cmbCalidad.Size = new System.Drawing.Size(147, 21);
-            this.cmbCalidad.TabIndex = 101;
+            this.cmbCalidad.TabIndex = 2;
             this.cmbCalidad.SelectedIndexChanged += new System.EventHandler(this.cmbCalidad_SelectedIndexChanged);
             // 
             // lblCalidad
@@ -116,7 +116,7 @@
             this.btnRestar.Location = new System.Drawing.Point(217, 130);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
-            this.btnRestar.TabIndex = 100;
+            this.btnRestar.TabIndex = 6;
             this.btnRestar.Text = "Restar";
             this.btnRestar.UseVisualStyleBackColor = true;
             this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
@@ -126,7 +126,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(119, 130);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -136,7 +136,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(162, 95);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
-            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TabIndex = 4;
             // 
             // cmbMachimbre
             // 
@@ -144,7 +144,7 @@
             this.cmbMachimbre.Location = new System.Drawing.Point(162, 66);
             this.cmbMachimbre.Name = "cmbMachimbre";
             this.cmbMachimbre.Size = new System.Drawing.Size(147, 21);
-            this.cmbMachimbre.TabIndex = 2;
+            this.cmbMachimbre.TabIndex = 3;
             // 
             // lblMedidaMachimbre
             // 
@@ -164,6 +164,7 @@
             this.btnExportar.TabIndex = 1;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // btnListar
             // 
@@ -188,7 +189,7 @@
             this.GrillaMachimbre.Location = new System.Drawing.Point(7, 20);
             this.GrillaMachimbre.Name = "GrillaMachimbre";
             this.GrillaMachimbre.Size = new System.Drawing.Size(897, 607);
-            this.GrillaMachimbre.TabIndex = 0;
+            this.GrillaMachimbre.TabIndex = 7;
             // 
             // Column4
             // 

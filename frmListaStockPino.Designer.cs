@@ -75,9 +75,9 @@
             this.grpCambios.Controls.Add(this.txtCantidad);
             this.grpCambios.Controls.Add(this.cmbPino);
             this.grpCambios.Controls.Add(this.lblMedidaPino);
-            this.grpCambios.Location = new System.Drawing.Point(7, 617);
+            this.grpCambios.Location = new System.Drawing.Point(7, 619);
             this.grpCambios.Name = "grpCambios";
-            this.grpCambios.Size = new System.Drawing.Size(302, 189);
+            this.grpCambios.Size = new System.Drawing.Size(302, 187);
             this.grpCambios.TabIndex = 21;
             this.grpCambios.TabStop = false;
             this.grpCambios.Text = "Agregado de Pino";
@@ -88,7 +88,7 @@
             this.cmbSecado.Location = new System.Drawing.Point(146, 33);
             this.cmbSecado.Name = "cmbSecado";
             this.cmbSecado.Size = new System.Drawing.Size(147, 21);
-            this.cmbSecado.TabIndex = 25;
+            this.cmbSecado.TabIndex = 2;
             this.cmbSecado.SelectedIndexChanged += new System.EventHandler(this.cmbSecado_SelectedIndexChanged);
             // 
             // lblSecado
@@ -105,7 +105,7 @@
             // 
             this.lblCantidadPaquetes.AutoSize = true;
             this.lblCantidadPaquetes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidadPaquetes.Location = new System.Drawing.Point(9, 107);
+            this.lblCantidadPaquetes.Location = new System.Drawing.Point(9, 102);
             this.lblCantidadPaquetes.Name = "lblCantidadPaquetes";
             this.lblCantidadPaquetes.Size = new System.Drawing.Size(131, 15);
             this.lblCantidadPaquetes.TabIndex = 24;
@@ -113,30 +113,30 @@
             // 
             // btnRestar
             // 
-            this.btnRestar.Location = new System.Drawing.Point(201, 147);
+            this.btnRestar.Location = new System.Drawing.Point(201, 137);
             this.btnRestar.Name = "btnRestar";
             this.btnRestar.Size = new System.Drawing.Size(92, 36);
-            this.btnRestar.TabIndex = 5;
+            this.btnRestar.TabIndex = 6;
             this.btnRestar.Text = "Restar";
             this.btnRestar.UseVisualStyleBackColor = true;
             this.btnRestar.Click += new System.EventHandler(this.btnRestar_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(103, 147);
+            this.btnAgregar.Location = new System.Drawing.Point(103, 137);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 36);
-            this.btnAgregar.TabIndex = 4;
+            this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // txtCantidad
             // 
-            this.txtCantidad.Location = new System.Drawing.Point(146, 106);
+            this.txtCantidad.Location = new System.Drawing.Point(146, 102);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(147, 20);
-            this.txtCantidad.TabIndex = 3;
+            this.txtCantidad.TabIndex = 4;
             // 
             // cmbPino
             // 
@@ -144,7 +144,7 @@
             this.cmbPino.Location = new System.Drawing.Point(146, 67);
             this.cmbPino.Name = "cmbPino";
             this.cmbPino.Size = new System.Drawing.Size(147, 21);
-            this.cmbPino.TabIndex = 2;
+            this.cmbPino.TabIndex = 3;
             // 
             // lblMedidaPino
             // 
@@ -158,7 +158,7 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(754, 674);
+            this.btnExportar.Location = new System.Drawing.Point(754, 676);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(150, 50);
             this.btnExportar.TabIndex = 1;
@@ -168,7 +168,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(754, 617);
+            this.btnListar.Location = new System.Drawing.Point(754, 619);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(150, 50);
             this.btnListar.TabIndex = 0;
@@ -189,7 +189,7 @@
             this.GrillaMaderas.Location = new System.Drawing.Point(7, 20);
             this.GrillaMaderas.Name = "GrillaMaderas";
             this.GrillaMaderas.Size = new System.Drawing.Size(897, 591);
-            this.GrillaMaderas.TabIndex = 100;
+            this.GrillaMaderas.TabIndex = 7;
             // 
             // Column4
             // 

@@ -91,5 +91,11 @@ namespace ControlStock
                 MessageBox.Show("Error al filtrar los espesores por calidad: " + ex.Message);
             }
         }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            fenólicos.GenerarReporteFenolicos();
+            MessageBox.Show("Reporte generado con exito");
+        }
     }
 }
