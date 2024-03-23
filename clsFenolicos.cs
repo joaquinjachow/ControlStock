@@ -131,11 +131,16 @@ namespace ControlStock
                     {
                         while (DR.Read())
                         {
+                            string calid = DR.IsDBNull(0) ? "" : DR.GetString(0);
+                            string espes = DR.IsDBNull(1) ? "" : DR.GetString(1);
+                            int cantHojasPaq = DR.IsDBNull(2) ? 0 : DR.GetInt32(2);
+                            int cantHojasTotal = DR.IsDBNull(3) ? 0 : DR.GetInt32(3);
+
                             Grilla.Rows.Add(
-                                DR.IsDBNull(0) ? string.Empty : DR.GetString(0),
-                                DR.IsDBNull(1) ? string.Empty : DR.GetString(1),
-                                DR.IsDBNull(2) ? (int?)null : DR.GetInt32(2),
-                                DR.IsDBNull(3) ? (int?)null : DR.GetInt32(3)
+                                DR.IsDBNull(0) ? string.Empty : calid,
+                                DR.IsDBNull(1) ? string.Empty : espes,
+                                DR.IsDBNull(2) ? (int?)null : cantHojasPaq,
+                                DR.IsDBNull(3) ? (int?)null : cantHojasTotal
                             );
                         }
                     }
@@ -184,7 +189,7 @@ namespace ControlStock
         }
         private void LlenarEncabezado(IXLWorksheet worksheet)
         {
-            var range = worksheet.Range("A10:F11");
+            var range = worksheet.Range("A10:D11");
 
             worksheet.Cell("B9").Value = "Vigencia Hasta:";
             worksheet.Range("B9:C9").Merge();
@@ -201,7 +206,7 @@ namespace ControlStock
         }
         private void LlenarDatos(IXLWorksheet worksheet)
         {
-            int rowNum = 14;
+            int rowNum = 12;
 
             conexion.ConnectionString = CadenaConexion;
             conexion.Open();
@@ -214,15 +219,15 @@ namespace ControlStock
             {
                 while (DR.Read())
                 {
-                    string calidad = DR.IsDBNull(0) ? string.Empty : (DR.GetString(0));
-                    string campo1 = DR.IsDBNull(1) ? string.Empty : (DR.GetString(1));
-                    int campo2 = DR.IsDBNull(2) ? 0 : DR.GetInt32(2);
-                    int campo3 = DR.IsDBNull(3) ? 0 : DR.GetInt32(3);
+                    string calid = DR.IsDBNull(0) ? "" : DR.GetString(0);
+                    string espes = DR.IsDBNull(1) ? "" : DR.GetString(1);
+                    int cantHojasPaq = DR.IsDBNull(2) ? 0 : DR.GetInt32(2);
+                    int cantHojasTotal = DR.IsDBNull(3) ? 0 : DR.GetInt32(3);
 
-                    worksheet.Cell("A" + rowNum).Value = calidad;
-                    worksheet.Cell("B" + rowNum).Value = campo1;
-                    worksheet.Cell("C" + rowNum).Value = campo2;
-                    worksheet.Cell("D" + rowNum).Value = campo3;
+                    worksheet.Cell("A" + rowNum).Value = calid;
+                    worksheet.Cell("B" + rowNum).Value = espes;
+                    worksheet.Cell("C" + rowNum).Value = cantHojasPaq;
+                    worksheet.Cell("D" + rowNum).Value = cantHojasTotal;
 
                     rowNum++;
                 }
@@ -254,12 +259,10 @@ namespace ControlStock
                 cell.Style.Border.InsideBorder = XLBorderStyleValues.None;
             }
 
-            worksheet.Column("A").Width = 16;
-            worksheet.Column("B").Width = 17;
-            worksheet.Column("C").Width = 17;
-            worksheet.Column("D").Width = 20;
-            worksheet.Column("E").Width = 25;
-            worksheet.Column("F").Width = 25;
+            worksheet.Column("A").Width = 20;
+            worksheet.Column("B").Width = 20;
+            worksheet.Column("C").Width = 25;
+            worksheet.Column("D").Width = 25;
         }
         public void GenerarReporteFenolicos()
         {

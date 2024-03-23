@@ -42,9 +42,8 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.GrillaMachimbre = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpMaderas.SuspendLayout();
@@ -60,7 +59,7 @@
             this.grpMaderas.Controls.Add(this.GrillaMachimbre);
             this.grpMaderas.Location = new System.Drawing.Point(12, 12);
             this.grpMaderas.Name = "grpMaderas";
-            this.grpMaderas.Size = new System.Drawing.Size(913, 812);
+            this.grpMaderas.Size = new System.Drawing.Size(778, 812);
             this.grpMaderas.TabIndex = 1;
             this.grpMaderas.TabStop = false;
             this.grpMaderas.Text = "Machimbres";
@@ -158,7 +157,7 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(754, 691);
+            this.btnExportar.Location = new System.Drawing.Point(620, 691);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(150, 50);
             this.btnExportar.TabIndex = 1;
@@ -168,7 +167,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(754, 633);
+            this.btnListar.Location = new System.Drawing.Point(620, 633);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(150, 50);
             this.btnListar.TabIndex = 0;
@@ -181,14 +180,13 @@
             this.GrillaMachimbre.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaMachimbre.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
-            this.Column1,
-            this.Column3,
             this.Column2,
+            this.Column3,
             this.Column5,
             this.Column6});
             this.GrillaMachimbre.Location = new System.Drawing.Point(7, 20);
             this.GrillaMachimbre.Name = "GrillaMachimbre";
-            this.GrillaMachimbre.Size = new System.Drawing.Size(897, 607);
+            this.GrillaMachimbre.Size = new System.Drawing.Size(763, 607);
             this.GrillaMachimbre.TabIndex = 7;
             // 
             // Column4
@@ -197,23 +195,17 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 130;
             // 
-            // Column1
+            // Column2
             // 
-            this.Column1.HeaderText = "Número Paquete";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
+            this.Column2.HeaderText = "Medida";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 130;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Cantidad Paquetes";
             this.Column3.Name = "Column3";
             this.Column3.Width = 130;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Medida";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 130;
             // 
             // Column5
             // 
@@ -231,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(931, 837);
+            this.ClientSize = new System.Drawing.Size(797, 837);
             this.Controls.Add(this.grpMaderas);
             this.Name = "frmListaStockMachimbre";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -258,13 +250,12 @@
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView GrillaMachimbre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.ComboBox cmbCalidad;
         private System.Windows.Forms.Label lblCalidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

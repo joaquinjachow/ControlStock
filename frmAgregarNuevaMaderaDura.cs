@@ -21,7 +21,6 @@ namespace ControlStock
         {
             clsMaderaDura madera = new clsMaderaDura();
             madera.Especie = txtEspecie.Text;
-            madera.NumeroPaquete = Convert.ToInt32(txtNumeroPaquete.Text);
             madera.CantidadPaquetes = Convert.ToInt32(txtCantidadPaquetes.Text);
             madera.Medida = txtMedida.Text;
             madera.CantidadTablasPaquete = Convert.ToInt32(txtCantidadTablas.Text);
@@ -31,7 +30,6 @@ namespace ControlStock
             MessageBox.Show("Datos grabados!!!");
 
             txtEspecie.Text = "";
-            txtNumeroPaquete.Text = "";
             txtCantidadPaquetes.Text = "";
             txtMedida.Text = "";
             txtCantidadTablas.Text = "";

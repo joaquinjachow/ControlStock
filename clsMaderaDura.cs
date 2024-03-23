@@ -20,7 +20,6 @@ namespace ControlStock
         private string CadenaConexion = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=ControlStockDB.mdb";
         private string Tabla = "MaderaDura";
 
-        public Int32 NumeroPaquete;
         public Int32 CantidadPaquetes;
         public String Medida;
         public Int32 CantidadTablasPaquete;
@@ -92,13 +91,12 @@ namespace ControlStock
         {
             try
             {
-                string sql = "INSERT INTO MaderaDura ([Número Paquete], [Cantidad Paquetes], Medida, [Cantidad de Tablas por Paquete], Especie) " +
-                             "VALUES (@NumeroPaquete, @CantidadPaquetes, @Medida, @CantidadTablasPaquete, @Especie)";
+                string sql = "INSERT INTO MaderaDura ([Cantidad Paquetes], Medida, [Cantidad de Tablas por Paquete], Especie) " +
+                             "VALUES (@CantidadPaquetes, @Medida, @CantidadTablasPaquete, @Especie)";
 
                 using (OleDbConnection connection = new OleDbConnection(CadenaConexion))
                 using (OleDbCommand cmd = new OleDbCommand(sql, connection))
                 {
-                    cmd.Parameters.AddWithValue("@NumeroPaquete", NumeroPaquete);
                     cmd.Parameters.AddWithValue("@CantidadPaquetes", CantidadPaquetes);
                     cmd.Parameters.AddWithValue("@Medida", Medida);
                     cmd.Parameters.AddWithValue("@CantidadTablasPaquete", CantidadTablasPaquete);
@@ -128,16 +126,16 @@ namespace ControlStock
                     {
                         while (DR.Read())
                         {
-                            int campo1 = DR.IsDBNull(0) ? 0 : DR.GetInt32(1);
-                            int campo4 = DR.IsDBNull(3) ? 0 : DR.GetInt32(3);
-                            int volumen = campo1 * campo4;
-                            string campo5 = DR.IsDBNull(4) ? string.Empty : DR.GetString(4);
+                            string espec = DR.IsDBNull(3) ? "" : DR.GetString(3);
+                            string medid = DR.IsDBNull(1) ? "" : DR.GetString(1);
+                            int cantPaq = DR.IsDBNull(0) ? 0 : DR.GetInt32(0);
+                            int cantTablasPaq = DR.IsDBNull(2) ? 0 : DR.GetInt32(2);
+                            int volumen = cantPaq * cantTablasPaq;
                             Grilla.Rows.Add(
-                                campo5,
-                                DR.IsDBNull(0) ? (int?)null : DR.GetInt32(0),
-                                DR.IsDBNull(1) ? (int?)null : DR.GetInt32(1),
-                                DR.IsDBNull(2) ? string.Empty : DR.GetString(2),
-                                DR.IsDBNull(3) ? (int?)null : DR.GetInt32(3),
+                                DR.IsDBNull(3) ? string.Empty : espec,
+                                DR.IsDBNull(1) ? string.Empty : medid,
+                                DR.IsDBNull(0) ? (int?)null : cantPaq,
+                                DR.IsDBNull(2) ? (int?)null : cantTablasPaq,
                                 volumen
                             );
                         }
@@ -187,25 +185,24 @@ namespace ControlStock
         }
         private void LlenarEncabezado(IXLWorksheet worksheet)
         {
-            var range = worksheet.Range("A10:F11");
+            var range = worksheet.Range("A10:E11");
 
-            worksheet.Cell("C9").Value = "Vigencia Hasta:";
-            worksheet.Range("C9:D9").Merge();
+            worksheet.Cell("B9").Value = "Vigencia Hasta:";
+            worksheet.Range("B9:D9").Merge();
             worksheet.Cell("A10").Value = "Listado Maderas Duras:";
-            worksheet.Range("A10:F10").Merge();
+            worksheet.Range("A10:E10").Merge();
             worksheet.Cell("A10").Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
             worksheet.Cell("A11").Value = "Especie";
-            worksheet.Cell("B11").Value = "N° Paquete";
+            worksheet.Cell("B11").Value = "Medida";
             worksheet.Cell("C11").Value = "Cant Paquetes";
-            worksheet.Cell("D11").Value = "Medida";
-            worksheet.Cell("E11").Value = "Cant. Tablas x Paquete";
-            worksheet.Cell("F11").Value = "Cant. Tablas Totales";
+            worksheet.Cell("D11").Value = "Cant. Tablas x Paquete";
+            worksheet.Cell("E11").Value = "Cant. Tablas Totales";
 
             range.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
         }
         private void LlenarDatos(IXLWorksheet worksheet)
         {
-            int rowNum = 14;
+            int rowNum = 12;
 
             conexion.ConnectionString = CadenaConexion;
             conexion.Open();
@@ -218,20 +215,17 @@ namespace ControlStock
             {
                 while (DR.Read())
                 {
-                    string campo5 = DR.IsDBNull(4) ? string.Empty : DR.GetString(4);
-                    int? campo0 = DR.IsDBNull(0) ? (int?)null : DR.GetInt32(0);
-                    int campo1 = DR.IsDBNull(1) ? 0 : DR.GetInt32(1);
-                    string campo2 = DR.IsDBNull(2) ? "" : DR.GetString(2);
-                    int campo3 = DR.IsDBNull(3) ? 0 : DR.GetInt32(3);
-                    int volumen = campo1 * campo3;
-                    string secado = DR.IsDBNull(4) ? string.Empty : (DR.GetString(4));
+                    string espec = DR.IsDBNull(3) ? "" : DR.GetString(3);
+                    string medid = DR.IsDBNull(1) ? "" : DR.GetString(1);
+                    int cantPaq = DR.IsDBNull(0) ? 0 : DR.GetInt32(0);
+                    int cantTablasPaq = DR.IsDBNull(2) ? 0 : DR.GetInt32(2);
+                    int volumen = cantPaq * cantTablasPaq;
 
-                    worksheet.Cell("A" + rowNum).Value = campo5;
-                    worksheet.Cell("B" + rowNum).Value = campo0.HasValue ? campo0.Value.ToString() : "";
-                    worksheet.Cell("C" + rowNum).Value = campo1;
-                    worksheet.Cell("D" + rowNum).Value = campo2;
-                    worksheet.Cell("E" + rowNum).Value = campo3;
-                    worksheet.Cell("F" + rowNum).Value = volumen;
+                    worksheet.Cell("A" + rowNum).Value = espec;
+                    worksheet.Cell("B" + rowNum).Value = medid;
+                    worksheet.Cell("C" + rowNum).Value = cantPaq;
+                    worksheet.Cell("D" + rowNum).Value = cantTablasPaq;
+                    worksheet.Cell("E" + rowNum).Value = volumen;
 
                     rowNum++;
                 }
@@ -266,9 +260,8 @@ namespace ControlStock
             worksheet.Column("A").Width = 16;
             worksheet.Column("B").Width = 17;
             worksheet.Column("C").Width = 17;
-            worksheet.Column("D").Width = 20;
+            worksheet.Column("D").Width = 25;
             worksheet.Column("E").Width = 25;
-            worksheet.Column("F").Width = 25;
         }
         public void GenerarReporteMaderaDura()
         {

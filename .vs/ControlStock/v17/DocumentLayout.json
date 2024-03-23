@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Biblioteca\\Descargas\\ControlStock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|d:\\biblioteca\\descargas\\controlstock\\frmlistastockpino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|solutionrelative:frmlistastockpino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|d:\\biblioteca\\descargas\\controlstock\\clsfenolicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|solutionrelative:clsfenolicos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|d:\\biblioteca\\descargas\\controlstock\\clsmaderadura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|solutionrelative:clsmaderadura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|d:\\biblioteca\\descargas\\controlstock\\clsmachimbre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|solutionrelative:clsmachimbre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|d:\\biblioteca\\descargas\\controlstock\\clspino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|solutionrelative:clspino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|d:\\biblioteca\\descargas\\controlstock\\frmlistastockpino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{889BBBD9-F3E9-4C78-9C33-0FBF388D080E}|ControlStock.csproj|solutionrelative:frmlistastockpino.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +26,59 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "clsFenolicos.cs",
+              "DocumentMoniker": "D:\\Biblioteca\\Descargas\\ControlStock\\clsFenolicos.cs",
+              "RelativeDocumentMoniker": "clsFenolicos.cs",
+              "ToolTip": "D:\\Biblioteca\\Descargas\\ControlStock\\clsFenolicos.cs",
+              "RelativeToolTip": "clsFenolicos.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T17:59:23.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "clsPino.cs",
               "DocumentMoniker": "D:\\Biblioteca\\Descargas\\ControlStock\\clsPino.cs",
               "RelativeDocumentMoniker": "clsPino.cs",
               "ToolTip": "D:\\Biblioteca\\Descargas\\ControlStock\\clsPino.cs",
               "RelativeToolTip": "clsPino.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAYwC0BAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAYwBIBAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T05:44:09.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmListaStockPino.cs",
-              "DocumentMoniker": "D:\\Biblioteca\\Descargas\\ControlStock\\frmListaStockPino.cs",
-              "RelativeDocumentMoniker": "frmListaStockPino.cs",
-              "ToolTip": "D:\\Biblioteca\\Descargas\\ControlStock\\frmListaStockPino.cs",
-              "RelativeToolTip": "frmListaStockPino.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACIAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T05:36:43.416Z",
+              "WhenOpened": "2024-03-22T17:31:08.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmListaStockPino.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\Biblioteca\\Descargas\\ControlStock\\frmListaStockPino.cs",
-              "RelativeDocumentMoniker": "frmListaStockPino.cs",
-              "ToolTip": "D:\\Biblioteca\\Descargas\\ControlStock\\frmListaStockPino.cs [Dise\u00F1o]",
-              "RelativeToolTip": "frmListaStockPino.cs [Dise\u00F1o]",
+              "Title": "clsMachimbre.cs",
+              "DocumentMoniker": "D:\\Biblioteca\\Descargas\\ControlStock\\clsMachimbre.cs",
+              "RelativeDocumentMoniker": "clsMachimbre.cs",
+              "ToolTip": "D:\\Biblioteca\\Descargas\\ControlStock\\clsMachimbre.cs",
+              "RelativeToolTip": "clsMachimbre.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAC4AAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T05:36:41.917Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-03-22T17:42:34.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "clsMaderaDura.cs",
+              "DocumentMoniker": "D:\\Biblioteca\\Descargas\\ControlStock\\clsMaderaDura.cs",
+              "RelativeDocumentMoniker": "clsMaderaDura.cs",
+              "ToolTip": "D:\\Biblioteca\\Descargas\\ControlStock\\clsMaderaDura.cs",
+              "RelativeToolTip": "clsMaderaDura.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAALkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T17:39:13.026Z",
+              "EditorCaption": ""
             }
           ]
         }

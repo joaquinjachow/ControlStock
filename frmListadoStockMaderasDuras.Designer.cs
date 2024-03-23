@@ -42,9 +42,8 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.GrillaMaderas = new System.Windows.Forms.DataGridView();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpMaderas.SuspendLayout();
@@ -60,7 +59,7 @@
             this.grpMaderas.Controls.Add(this.GrillaMaderas);
             this.grpMaderas.Location = new System.Drawing.Point(12, 12);
             this.grpMaderas.Name = "grpMaderas";
-            this.grpMaderas.Size = new System.Drawing.Size(879, 812);
+            this.grpMaderas.Size = new System.Drawing.Size(749, 812);
             this.grpMaderas.TabIndex = 1;
             this.grpMaderas.TabStop = false;
             this.grpMaderas.Text = "Maderas Duras";
@@ -158,7 +157,7 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.Location = new System.Drawing.Point(723, 707);
+            this.btnExportar.Location = new System.Drawing.Point(592, 707);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(150, 50);
             this.btnExportar.TabIndex = 1;
@@ -168,7 +167,7 @@
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(723, 651);
+            this.btnListar.Location = new System.Drawing.Point(592, 651);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(150, 50);
             this.btnListar.TabIndex = 0;
@@ -181,14 +180,13 @@
             this.GrillaMaderas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GrillaMaderas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
-            this.Column1,
-            this.Column3,
             this.Column2,
+            this.Column3,
             this.Column5,
             this.Column6});
             this.GrillaMaderas.Location = new System.Drawing.Point(7, 20);
             this.GrillaMaderas.Name = "GrillaMaderas";
-            this.GrillaMaderas.Size = new System.Drawing.Size(866, 625);
+            this.GrillaMaderas.Size = new System.Drawing.Size(735, 625);
             this.GrillaMaderas.TabIndex = 7;
             // 
             // Column4
@@ -197,23 +195,17 @@
             this.Column4.HeaderText = "Especie";
             this.Column4.Name = "Column4";
             // 
-            // Column1
+            // Column2
             // 
-            this.Column1.HeaderText = "Número Paquete";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 130;
+            this.Column2.HeaderText = "Medida";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 130;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Cantidad Paquetes";
             this.Column3.Name = "Column3";
             this.Column3.Width = 130;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Medida";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 130;
             // 
             // Column5
             // 
@@ -231,7 +223,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 830);
+            this.ClientSize = new System.Drawing.Size(765, 830);
             this.Controls.Add(this.grpMaderas);
             this.Name = "frmListadoStockMaderasDuras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -258,13 +250,12 @@
         private System.Windows.Forms.Button btnExportar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView GrillaMaderas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.ComboBox cmbEspecie;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
     }
 }

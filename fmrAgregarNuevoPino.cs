@@ -31,7 +31,6 @@ namespace ControlStock
                 MessageBox.Show("Por favor seleccione un método de secado.");
                 return;
             }
-            pino.NumeroPaquete = Convert.ToInt32(txtNumeroPaquete.Text);
             pino.CantidadPaquetes = Convert.ToInt32(txtCantidadPaquetes.Text);
             pino.Medida = txtMedida.Text;
             pino.CantidadTablasPaquete = Convert.ToInt32(txtCantidadTablas.Text);
@@ -41,7 +40,6 @@ namespace ControlStock
             MessageBox.Show("Datos grabados!!!");
 
             cmbSecado.Text = "";
-            txtNumeroPaquete.Text = "";
             txtCantidadPaquetes.Text = "";
             txtMedida.Text = "";
             txtCantidadTablas.Text = "";

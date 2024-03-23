@@ -21,7 +21,6 @@ namespace ControlStock
         {
             clsMachimbre machimbre = new clsMachimbre();
             machimbre.Calidad = txtCalidad.Text;
-            machimbre.NumeroPaquete = Convert.ToInt32(txtNumeroPaquete.Text);
             machimbre.CantidadPaquetes = Convert.ToInt32(txtCantidadPaquetes.Text);
             machimbre.Medida = txtMedida.Text;
             machimbre.CantidadTablasPaquete = Convert.ToInt32(txtCantidadTablas.Text);
@@ -31,7 +30,6 @@ namespace ControlStock
             MessageBox.Show("Datos grabados!!!");
 
             txtCalidad.Text = "";
-            txtNumeroPaquete.Text = "";
             txtCantidadPaquetes.Text = "";
             txtMedida.Text = "";
             txtCantidadTablas.Text = "";
